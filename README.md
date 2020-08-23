@@ -25,10 +25,12 @@ cd tests
 ```
 
 + Run sample case/Add your own python program
+```
+gedit test.py
+```
 
-```
-save this code (if you added your program) and note down the name of this file (with extension). Call this <test.py>
-```
++ save this code (if you added your program)
+
 
 + Open the input.json file
 
