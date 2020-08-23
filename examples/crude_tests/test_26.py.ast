@@ -1,0 +1,12 @@
+Assign
+name:a
+num:1
+Compare
+name:a
+num:1
+Assign
+name:b
+num:1
+Assign
+name:b
+name:a

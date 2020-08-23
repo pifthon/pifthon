@@ -1,0 +1,12 @@
+Assign
+name:a
+num:1
+While
+Compare
+name:a
+name:e
+Assign
+name:e
+name:a
+name:f
+endloop

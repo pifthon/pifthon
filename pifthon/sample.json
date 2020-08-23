@@ -1,0 +1,97 @@
+{
+    "configurations":
+    {
+            "file_name": "assign1.py",
+
+            "parallel":"false",
+
+            "subject":"S",
+            
+            "label": {
+                "owner" : "A",
+                "readers": [
+                    {"id":"B"},
+                    {"id":"A"}
+                ],
+                "writers": [
+                    {"id": "A"},
+                    {"id":"C"}
+                ]
+            },
+
+            "global_vars": [
+                {
+                    "id":"a",
+                    "label": {
+                        "owner" : "A",
+                        "readers": [
+                            {"id": "A"},
+                            {"id": "B"},
+                            {"id": "D"},
+                            {"id": "C"}                              
+                        ],
+                        "writers": [
+                             {"id": "A"},
+                             {"id": "C"}
+                        ]
+                    }
+                },
+
+                {
+                    "id":"b",
+                    "label": {
+                        "owner" : "A",
+                        "readers": [
+                            {"id": "B"},
+                            {"id": "A"}
+                        ],
+                        "writers": [
+                           {"id": "C"},
+                           {"id": "A"}
+                        ]
+                    }
+                },
+                {
+                    "id":"c",
+                    "label": {
+                        "owner" : "C",
+                        "readers": [
+                            {"id": "A"}
+                        ],
+                        "writers": [
+                            {"id": "A"},
+                            {"id": "B"},
+                            {"id": "C"}
+                        ]
+                    }
+
+                }
+            ],
+            
+            "method_label": [
+                {
+                    "name":"foo",
+                    "label": {
+                        "owner" : "B",
+                        "readers": [
+                            {"id": "B"},
+                            {"id": "A"}
+                        ],
+                        "writers": [
+                            {"id": "A"},
+                            {"id": "C"}
+                        ]
+                    }
+                }
+            ],
+
+            "threads": [
+
+                {
+                    "subject":"A",
+                    "name":"foo"
+                }
+            ] 
+    }
+            
+}

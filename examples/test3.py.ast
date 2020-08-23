@@ -1,0 +1,13 @@
+Assign
+name:b
+name:a
+FunctionDef
+func:main
+Assign
+name:x
+num:1
+Assign
+name:y
+name:c
+name:d
+endfunc

@@ -1,0 +1,17 @@
+FunctionDef
+func:main
+Assign
+name:a
+name:b
+num:2
+Assign
+name:c
+name:a
+name:b
+endfunc
+Assign
+name:a
+Call
+func:main
+func_arg_open:
+func_arg_close:

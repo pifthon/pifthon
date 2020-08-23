@@ -1,0 +1,29 @@
+FunctionDef
+func:foo
+arg:d
+Compare
+name:b
+name:a
+Return
+name:a
+Return
+name:b
+str:this 
+		is 
+		a
+endfunc
+Assign
+name:l1
+num:1
+num:2
+num:3
+num:4
+Call
+func:print
+func_arg_open:
+Call
+func:foo
+func_arg_open:
+arg:apple
+func_arg_close:
+func_arg_close:

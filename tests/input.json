@@ -1,0 +1,88 @@
+{
+    "configurations":
+    {
+            "file_name": "assign1.py",
+
+            "parallel":"false",
+
+            "subject":"S",
+            
+            "label": {
+                "owner" : "S",
+                "readers": [
+                    {"id":"S"}
+                ],
+                "writers": [
+                    {"id":"A"},
+                    {"id":"B"}
+
+                ]
+            },
+
+            "global_vars": [
+                {
+                    "id":"x",
+                    "label": {
+                        "owner" : "A",
+                        "readers": [
+                            {"id": "S"},
+                            {"id": "A"}             
+                        ],
+                        "writers": [
+                             {"id": "A"}
+                        ]
+                    }
+                },
+
+                {
+                    "id":"y",
+                    "label": {
+                        "owner" : "B",
+                        "readers": [
+                            {"id": "S"},  
+                            {"id": "B"}                
+                        ],
+                        "writers": [
+                             {"id": "B"}
+                        ]
+                    }
+                }
+            ],
+            
+            "method_label": [
+                {
+                    "name":"foo",
+                    "label": {
+                        "owner" : "B",
+                        "readers": [
+                            {"id": "B"},
+                            {"id": "A"}
+                        ],
+                        "writers": [
+                            {"id": "A"},
+                            {"id": "C"}
+                        ]
+                    }
+                }
+            ],
+
+            "threads": [
+
+                {
+                    "name":"foo",
+                    "label": {
+                        "owner" : "B",
+                        "readers": [
+                            {"id": "B"},
+                            {"id": "A"}
+                        ],
+                        "writers": [
+                            {"id": "A"},
+                            {"id": "C"}
+                        ]
+                    }
+                }
+            ] 
+    }
+            
+}

@@ -1,0 +1,101 @@
+{
+	"configurations":
+	{
+					"file_name": "assign1.py",
+
+					"parallel":"false",
+
+					"subject":"A",
+					
+					"label": {
+							"owner" : "A",
+							"readers": [
+									{"id":"A"}
+							],
+							"writers": [
+									{"id":"A"},
+									{"id":"B"}
+
+							]
+					},
+
+					"global_vars": [
+							{
+									"id":"pwd_db",
+									"label": {
+											"owner" : "B",
+											"readers": [
+													{"id": "B"}           
+											],
+											"writers": [
+													 {"id": "A"},
+													 {"id": "B"}
+											]
+									}
+							},
+
+							{
+									"id":"guess_pwd",
+									"label": {
+											"owner" : "A",
+											"readers": [
+													{"id": "A"},  
+													{"id": "B"}                
+											],
+											"writers": [
+													 {"id": "A"}
+											]
+									}
+							},
+
+							{
+								"id":"new_pwd",
+								"label": {
+										"owner" : "A",
+										"readers": [
+												{"id": "A"},  
+												{"id": "B"}                
+										],
+										"writers": [
+												 {"id": "A"}
+										]
+								}
+						}
+					],
+					
+					"method_label": [
+							{
+									"name":"Password_Update",
+									"label": {
+											"owner" : "B",
+											"readers": [
+													{"id": "B"}
+											],
+											"writers": [
+													{"id": "A"},
+													{"id": "B"}
+											]
+									}
+							}
+					],
+
+					"threads": [
+
+							{
+									"name":"foo",
+									"label": {
+											"owner" : "B",
+											"readers": [
+													{"id": "B"},
+													{"id": "A"}
+											],
+											"writers": [
+													{"id": "A"},
+													{"id": "C"}
+											]
+									}
+							}
+					] 
+	}
+					
+}

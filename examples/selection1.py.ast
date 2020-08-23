@@ -1,0 +1,17 @@
+FunctionDef
+func:main
+Compare
+name:e
+name:c
+Assign
+name:b
+name:e
+Assign
+name:c
+name:f
+name:e
+endfunc
+Call
+func:main
+func_arg_open:
+func_arg_close:

@@ -1,0 +1,87 @@
+{
+    "source_file":
+    {
+            "path": "inputs/list1.py",
+
+            "label": {
+                "owner" : "C",
+                "readers": [
+
+                    {"id":"C"}
+
+                ],
+                "writers": [
+                    {"id": "C"},
+                    {"id":"B"},
+                    {"id":"A"}
+                ]
+            },
+
+            "function_label": [
+            ],
+
+            "global_vars": [
+
+                {
+                    "id":"winner",
+                    "label": {
+                        "owner" : "C",
+                        "readers": [
+                            {"id": "A"},
+                            {"id": "B"},
+                            {"id": "C"}
+                        ],
+                        "writers": [
+                            {"id": "A"},
+                            {"id": "B"}
+                        ]
+                    }
+                },
+                {
+                    "id":"bidA",
+                    "label": {
+                        "owner" : "A",
+                        "readers": [
+                            {"id": "A"},
+                            {"id": "C"}
+                        ],
+                        "writers": [
+                            {"id": "A"}
+                        ]
+                    }
+                },
+                {
+                    "id":"bidB",
+                    "label": {
+                        "owner" : "B",
+                        "readers": [
+                            {"id": "B"},
+                            {"id": "C"}
+                        ],
+                        "writers": [
+                           {"id": "B"}
+                        ]
+                    }
+                }
+            ],
+
+            "outputfile":[
+
+                {
+                    "name":"print_file",
+                    "label": {
+                            "owner" : "A",
+                            "readers": [
+                                    {"id": "D"},
+                                    {"id": "B"},
+                                    {"id": "C"}
+                                ],
+                            "writers": [
+                                    {"id": "B"}
+                                ]
+                        }
+                    }
+            ]
+    }
+
+}

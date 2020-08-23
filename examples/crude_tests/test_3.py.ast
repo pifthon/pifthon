@@ -1,0 +1,17 @@
+While
+Compare
+name:c
+num:1
+Assign
+name:a
+name:c
+Compare
+name:c
+num:1
+Assign
+name:c
+name:d
+Assign
+name:c
+name:b
+endloop

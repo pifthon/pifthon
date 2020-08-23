@@ -1,0 +1,68 @@
+{
+    "source_file":
+    {
+            "name": "test.py",
+            
+            "label": {
+                "owner" : "A",
+                "readers": [
+                    {"id":"A"},
+                    {"id":"B"}
+                ],
+                "writers": [
+                    {"id": "A"}
+                ]
+            },
+        
+            "functions":[
+                {
+                    "name" : "",
+                    "label": {
+                        "owner" : "",
+                        "readers": "",
+                        "writers": ""
+                    }
+                },
+            
+                {   
+                    "name" : "",
+                    "label": {
+                        "owner" : "",
+                        "readers": "",
+                        "writers": ""
+                    }
+                }
+            ],
+            
+            "global_vars": [
+                {
+                    "id":"a",
+                    "label": {
+                        "owner" : "A",
+                        "readers": [
+                            {"id":"A"},
+                            {"id":"B"}
+                        ],
+                        "writers": [
+                            {"id": "A"}
+                        ]
+                    }
+                },
+                
+                {
+                    "id":"c",
+                    "label": {
+                        "owner" : "A",
+                        "readers": [
+                            {"id":"A"},
+                            {"id":"B"}
+                        ],
+                        "writers": [
+                            {"id": "A"}
+                        ]
+                    }
+                }
+            ]
+    }
+            
+}

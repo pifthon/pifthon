@@ -1,0 +1,143 @@
+{
+    "source_file":
+    {
+            "path": "inputs/list1.py",
+            
+            "label": {
+                "owner" : "A",
+                "readers": [
+                    {"id":"B"},
+                    {"id":"A"}
+                ],
+                "writers": [
+                    {"id": "A"},
+                    {"id":"C"}
+                ]
+            },
+            
+            "function_label": [
+                {
+                    "name":"foo",
+                    "label": {
+                        "owner" : "B",
+                        "readers": [
+                            {"id": "B"},
+                            {"id": "A"}
+                        ],
+                        "writers": [
+                            {"id": "A"},
+                            {"id": "C"}
+                        ]
+                    }
+                }
+            ],
+            
+            "global_vars": [
+                {
+                    "id":"a",
+                    "label": {
+                        "owner" : "A",
+                        "readers": [
+                            {"id": "A"},
+                            {"id": "B"}                              
+                        ],
+                        "writers": [
+                             {"id": "A"},
+                             {"id": "C"}
+                        ]
+                    }
+                },
+
+                {
+                    "id":"b",
+                    "label": {
+                        "owner" : "A",
+                        "readers": [
+                            {"id": "B"},
+                            {"id": "A"}
+                        ],
+                        "writers": [
+                           {"id": "C"}
+                        ]
+                    }
+                },
+                {
+                    "id":"c",
+                    "label": {
+                        "owner" : "C",
+                        "readers": [
+                            {"id": "A"},
+                            {"id": "B"},
+                            {"id": "C"}
+                        ],
+                        "writers": [
+                            {"id": "A"}
+                        ]
+                    }
+
+                },
+                {
+                    "id":"d",
+                    "label": {
+                        "owner" : "D",
+                        "readers": [
+                            {"id": "D"},
+                            {"id": "B"},
+                            {"id": "C"}
+                        ],
+                        "writers": [
+                            {"id": "B"}
+                        ]
+                    }
+
+                },
+                {
+                    "id":"list1",
+                    "label": {
+                        "owner" : "A",
+                        "readers": [
+                            {"id": "A"},
+                            {"id": "B"},
+                            {"id": "C"}
+                        ],
+                        "writers": [
+                            {"id": "A"}
+                        ]
+                    }
+
+                }
+            ],
+
+            "outputfile":[
+                    
+                        {"name":"print_file",
+                                                "label": {
+                                                            "owner" : "A",
+                                                            "readers": [
+                                                                        {"id": "D"},
+                                                                        {"id": "B"},
+                                                                        {"id": "C"}
+                                                                    ],
+                                                            "writers": [
+                                                                        {"id": "B"}
+                                                                    ]
+                                                          }
+                                                      },
+                        {"name":"write_file",
+                                                "label": {
+                                                            "owner" : "A",
+                                                            "readers": [
+                                                                       {"id": "D"},
+                                                                       {"id": "B"},
+                                                                       {"id": "C"}
+                                                                    ],
+                                                            "writers": [
+                                                                       {"id": "B"}
+                                                                    ]
+                                                         }
+                                                     }
+                     
+            ] 
+    }
+            
+}

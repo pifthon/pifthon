@@ -1,0 +1,1 @@
+downgrade(a, ['A','B'])
