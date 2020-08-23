@@ -4,7 +4,7 @@ Pifthon is a flow analyzer that keeps track of all the information flows taking 
 
 >[Pifthon Version 0.1](https://github.com/pifthon/pifthon) 
 
-First, the analyzer reads security labels of global variables of a given program from a JSON file. Second, it auto-generates final labels for the local variables. In the presence of a potential information leak, the analyzer throws an error message with sufficient feedback.
+First, the analyzer reads security labels of global variables of a given program from a JSON file. Then it auto-generates final labels for all the local variables. In the presence of a potential information leak, the analyzer throws an error message with sufficient feedback.
 
 ## Local Setup Instructions
 
