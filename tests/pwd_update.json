@@ -1,0 +1,81 @@
+{
+    "configurations":
+    {
+            "file_name": "password_update.py",
+
+            "subject":"A",
+            
+            "label": {
+                "owner" : "A",
+                "readers": [
+                    {"id":"A"}
+                ],
+                "writers": [
+                    {"id":"A"},
+                    {"id":"B"}
+
+                ]
+            },
+
+            "global_vars": [
+                {
+                    "id":"guess_pwd",
+                    "label": {
+                        "owner" : "A",
+                        "readers": [
+                            {"id": "A"},
+                            {"id": "B"}             
+                        ],
+                        "writers": [
+                             {"id": "A"}
+                        ]
+                    }
+                },
+
+                {
+                    "id":"new_pwd",
+                    "label": {
+                        "owner" : "A",
+                        "readers": [
+                            {"id": "A"},  
+                            {"id": "B"}                
+                        ],
+                        "writers": [
+                             {"id": "A"}
+                        ]
+                    }
+								},
+								
+								{
+									"id":"pwd_db",
+									"label": {
+											"owner" : "B",
+											"readers": [ 
+													{"id": "B"}                
+											],
+											"writers": [
+													 {"id": "A"},
+													 {"id": "A"}
+											]
+									}
+							}
+            ],
+            
+            "method_label": [
+                {
+                    "name":"Password_Update",
+                    "label": {
+                        "owner" : "B",
+                        "readers": [
+                            {"id": "B"}
+                        ],
+                        "writers": [
+                            {"id": "A"},
+                            {"id": "B"}
+                        ]
+                    }
+                }
+            ] 
+    }
+            
+}

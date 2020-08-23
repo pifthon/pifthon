@@ -268,6 +268,20 @@ class Parser:
         elif token.type == BOOL:
             self.match()
             return Boolean(token, Label(self.user_inputs.subject,{'*'}, {}))
+        elif token.type in (SQUOTE, DQUOTE):
+            if self.tokens[self.index].type == SQUOTE:
+                self.match() # for SQUOTE
+                if self.tokens[self.index].type in (INT,FLOAT,ID):
+                    token = self.tokens[self.index]
+                    self.match() # for INT/FLOAT/ID
+                    self.match() # for SQUOTE
+            elif self.tokens[self.index].type == DQUOTE:
+                self.match() # for DQUOTE
+                if self.tokens[self.index].type in (INT,FLOAT,ID):
+                    token = self.tokens[self.index]
+                    self.match() # for INT/FLOAT/ID
+                    self.match() # for DQUOTE
+            return String(token, Label(self.user_inputs.subject,{'*'}, {}))
         elif token.type == LPAREN:
             self.match()
             node = self.expr()

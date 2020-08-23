@@ -298,6 +298,20 @@ class SyntaxTree:
         elif token.type == BOOL:
             self.match()
             return Boolean(token)
+        elif token.type in (SQUOTE, DQUOTE):
+            if self.tokens[self.index].type == SQUOTE:
+                self.match() # for SQUOTE
+                if self.tokens[self.index].type in (INT,FLOAT,ID):
+                    token = self.tokens[self.index]
+                    self.match() # for INT/FLOAT/ID
+                    self.match((SQUOTE))
+            elif self.tokens[self.index].type == DQUOTE:
+                self.match() # for DQUOTE
+                if self.tokens[self.index].type in (INT,FLOAT,ID):
+                    token = self.tokens[self.index]
+                    self.match() # for INT/FLOAT/ID
+                    self.match((DQUOTE))
+            return String(token)
         elif token.type == LPAREN:
             node = self.expr()
             return node
@@ -646,11 +660,11 @@ class SyntaxTree:
         # if the current token is a NEWLINE or ENDEF or ENDIF or EWHILE return None
         if self.tokens[self.index].type in (ENDIF, ENDEF, EWHILE, NEWLINE):
             return None
-        # if the current token is a TAB and followed by an empty statement
+        # if the current token is a TAB and not followed by an empty statement
         elif self.tokens[self.index].type != TAB or self.tokens[self.index+1].type != NEWLINE:
             self.indentation()
 
-        # otherwise advance the index
+        # otherwise advance the index by removing the token from the list
         else:
             self.tokens.pop(self.index)
 

@@ -111,6 +111,9 @@ class Analyzer(NodeVisitor):
         # return node.value
         pass
 
+    def visit_String(self, node):
+        pass
+
 
     def visit_Compound(self, node):
         for child in node.children:
