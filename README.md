@@ -1,6 +1,6 @@
 # [Pifthon](https://github.com/pifthon/pifthon) (Python Information Flow Analyzer)
 
-Pifthon is a flow analyzer that keeps track of all the information flows taking place in python code and identify a program point that is vulnerable to an information leak.
+Pifthon is a flow analyzer that keeps track of all the information flows taking place in a given python program and identify a program point that is vulnerable to an information leak with respect to the given security labels of global variables (variables those interact with outside entities).
 
 >[Pifthon Version 0.1](https://github.com/pifthon/pifthon) 
 
