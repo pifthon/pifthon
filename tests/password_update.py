@@ -3,7 +3,7 @@ def Password_Update ( new_pwd , guess_pwd ) :
 	if pwd_db == guess_pwd :
 		pwd_db = new_pwd
 		result = True
-	return result
+	return downgrade(result,{'A'})
 
 guess_pwd = ' oldpwd '
 new_pwd = ' mypwd '

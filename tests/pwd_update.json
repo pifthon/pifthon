@@ -44,21 +44,21 @@
                              {"id": "A"}
                         ]
                     }
-								},
+                },
 								
-								{
-									"id":"pwd_db",
-									"label": {
-											"owner" : "B",
-											"readers": [ 
-													{"id": "B"}                
-											],
-											"writers": [
-													 {"id": "A"},
-													 {"id": "A"}
-											]
-									}
-							}
+                {
+                    "id":"pwd_db",
+                    "label": {
+                        "owner" : "B",
+                        "readers": [ 
+                            {"id": "B"}                
+                        ],
+                        "writers": [
+                            {"id": "A"},
+                            {"id": "B"}
+                        ]
+                    }
+                }
             ],
             
             "method_label": [
